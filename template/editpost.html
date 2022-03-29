@@ -12,6 +12,10 @@
     </nav>
     <form action="">
         <h1>Victor's Blog</h1>
+        <label for="title">Title</label><br>
+        <textarea name="topic" id="title">{{ .Topic }}</textarea><br><br>
+        <label>Content</label><br>
+        <textarea name="content">{{ .Content }}</textarea><br>
         
         <button class="edit">Edit post</button>
     </form>

@@ -56,5 +56,24 @@ func deletePost(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 	log.Println(Data1.DataStructure)
-	http.Redirect(w, r, "/", http.StatusFound)
+	http.Redirect(w, r, "/", 302)
+}
+
+func editPost(w http.ResponseWriter, r *http.Request) {
+	id := chi.URLParam(r, "Id")
+
+	for _, value := range Data1.DataStructure {
+		if id == value.Id {
+
+			content = value
+
+			files, err := template.ParseFiles("template/editpost.html")
+			handleErr(err)
+
+			err = files.Execute(w, value)
+			handleErr(err)
+
+		}
+	}
+
 }
