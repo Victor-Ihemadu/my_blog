@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<nav>
+    <a href="editpost.html"></a>
+</nav>
+
+    <h1>Victor's Blog</h1>
+    <a href="/create">Create Post</a><br>
+<div>
+    {{with .DataStructure}}
+    {{ range . }}
+    <div>
+        <h5>{{ .Id }}</h5>
+        <h3>{{ .Topic }}</h3>
+        <h5>{{ .Content }}</h5>
+
+        <a href="/editpost/{{ .Id }}">Edit Post</a><br>
+        <a href="/delete/{{ .Id }}">Delete</a><br>
+    </div>
+    {{ end }}
+    {{ end }}
+
+</div>
+
+</body>
+</html>
