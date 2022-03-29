@@ -53,10 +53,6 @@ func deletePost(w http.ResponseWriter, r *http.Request) {
 			//log.Println("i and value", id, value.Id)
 			Data1.DataStructure = append(Data1.DataStructure[:i], Data1.DataStructure[i+1:]...)
 			log.Println("container 2 ", Data1.DataStructure)
-
-			//0123456
-			//012
-			//4
 		}
 	}
 	log.Println(Data1.DataStructure)
