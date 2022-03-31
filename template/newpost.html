@@ -5,22 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        *{
+            text-align: center;
+        }
+        input{
+            font-size: 20px;
+        }
+        body{
+            background-color: antiquewhite;
+        }
+        a{
+            text-decoration: none;
+        }
+        button{
+            font-size: 20px;
+            border-radius: 20px;
+            margin: 20px 0 0 10px;
+            cursor: pointer;
+        }
+        h1{
+            font-size: 45px;
+        }
+    </style>
 </head>
 <body>
-<header>
-    <nav>
-        <a href="/">Home</a>
-    </nav>
-</header>
 
 <form method="post">
-    <h1>Victor's Blog</h1>
-    <label for="topic">Topic</label><br>
+    <h1>Decadev's Lounge</h1>
+    <label for="topic"><strong>Topic</strong></label><br>
     <input type="text" id="topic" name="topic"><br>
-    <label for="content">Content</label><br>
+    <label for="content"><strong>Content</strong></label><br>
     <input type="text" id="content" name="content">
+    <div>
+        <button type="submit">Create Post</button>
+        <button><a href="/">Home Page</a></button>
+    </div>
 
-    <button type="submit">Create Post</button>
 </form>
+
 </body>
 </html>
