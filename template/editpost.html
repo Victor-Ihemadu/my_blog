@@ -5,6 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        body{
+            background-color: antiquewhite;
+        }
+        a{
+            text-decoration: none;
+        }
+        button{
+            font-size: 20px;
+            border-radius: 20px;
+            margin-right: 10px;
+        }
+        h1{
+            font-size: 45px;
+        }
+    </style>
 </head>
 <body>
 <nav>
@@ -13,9 +32,9 @@
 <form method="post">
     <h1>Victor's Blog</h1>
     <label>Topic</label><br>
-    <textarea name="topic">{{ .Topic }}</textarea><br><br>
+    <textarea name="topic" style="font-size: 30px">{{ .Topic }}</textarea><br><br>
     <label>Content</label><br>
-    <textarea name="content">{{ .Content }}</textarea><br>
+    <textarea name="content" style="font-size: 30px">{{ .Content }}</textarea><br>
 
     <button class="submit">Post</button>
 </form>

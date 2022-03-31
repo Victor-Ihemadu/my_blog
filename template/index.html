@@ -24,6 +24,10 @@
         h1{
             font-size: 45px;
         }
+        .element{
+            display: flex;
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
@@ -34,13 +38,16 @@
     {{range $i, $v:= .}}
         {{if $v.State}}
     <div>
-        <h3>{{ .Topic }}</h3><br>
-        <p>
+        <h3 style="font-size: 30px">{{ .Topic }}</h3><br>
+        <p style="font-size: 30px">
             {{ .Content }}<br>
 
-            <a href="update/{{ .Id }}">Edit</a>
+        <div class="element">
+            <div><button><a href="update/{{ .Id }}">Edit</a></button></div>
             <br>
-            <a href="delete/{{ .Id }}">Delete</a>
+        <div><button><a href="delete/{{ .Id }}">Delete</a></button></div>
+        </div>
+    </div>
         </p>
 
     </div>

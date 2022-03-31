@@ -77,9 +77,8 @@ func postContent(w http.ResponseWriter, r *http.Request) {
 	p.Content = content
 	p.State = true
 
-	if DataStructure != nil {
-		DataStructure = append(DataStructure, p)
-	}
+	DataStructure = append(DataStructure, p)
+
 	http.Redirect(w, r, "/", 302)
 }
 
